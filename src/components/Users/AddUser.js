@@ -1,4 +1,4 @@
-import { useState } from "react";
+import React, { useState } from "react";
 import Button from "../UI/Button";
 import Card from "../UI/Card";
 import classes from "./AddUser.module.css";
@@ -15,7 +15,7 @@ const AddUser = (props) => {
 
     if (+enteredAge < 1) return;
 
-    console.log(enteredUsername, enteredAge);
+    props.onAddNewUser(enteredUsername, enteredAge);
     setEnteredUsername("");
     setEnteredAge("");
   };
